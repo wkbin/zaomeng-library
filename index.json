@@ -12,6 +12,17 @@
       "download_url": "https://raw.githubusercontent.com/wkbin/zaomeng-library/main/books/hongloumeng.zaomeng-run.zip",
       "sha256": "8f2bafb69731ae933126f19e98dfe415394370575bc444d120cb152b4be0b79c",
       "size_bytes": 2128757
+    },
+    {
+      "id": "nvshen-gonglue-tiaojiao-shouce",
+      "title": "女神攻略调教手册",
+      "created_by": "佚名",
+      "summary": "人物蒸馏包，包含 4 名角色及关系图数据。",
+      "version": "1.0.0",
+      "release_notes": "首个图书馆发布版本，包含 4 名角色蒸馏资料与关系图数据。",
+      "download_url": "https://raw.githubusercontent.com/wkbin/zaomeng-library/main/books/nvshen-gonglue-tiaojiao-shouce.zaomeng-run.zip",
+      "sha256": "c067a086bacb8c82e3c26fe7366b6868af245af7819c10dc123864248b5bdc96",
+      "size_bytes": 5024801
     }
   ]
 }
