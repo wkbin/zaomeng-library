@@ -5,7 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        请勿在 Issue 正文粘贴包内容。维护者会下载并校验你提供的包，再决定是否入库。
+        提交表单后，请将完整的 .zaomeng-run.zip 文件直接拖入本 Issue 正文并提交。
+        GitHub Issue Form 不支持内置文件上传控件，因此附件操作在表单之外完成。维护者会下载并校验附件后再决定是否入库。
 
   - type: input
     id: title
@@ -61,11 +62,9 @@ body:
   - type: input
     id: package_url
     attributes:
-      label: 包下载地址
-      description: 提供可由维护者下载的完整 .zaomeng-run.zip URL。链接应在审核期间保持可用。
+      label: 备用包下载地址（可选）
+      description: 仅在无法附加 ZIP 时填写。链接应指向完整的 .zaomeng-run.zip 文件，并在审核期间保持可用。
       placeholder: https://example.com/book.zaomeng-run.zip
-    validations:
-      required: true
 
   - type: input
     id: sha256
@@ -79,6 +78,8 @@ body:
     attributes:
       label: 提交确认
       options:
+        - label: 我已将完整的 .zaomeng-run.zip 文件作为附件拖入本 Issue 正文；若无法附加，我已填写备用下载地址。
+          required: true
         - label: 我确认包可正常打开，且 ZIP 根目录包含 package_manifest.json。
           required: true
         - label: 我确认有权提交该书卷及其包含的内容，并理解维护者会在公开仓库中发布该包。

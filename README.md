@@ -54,7 +54,7 @@ zaomeng-library/
 
 ## 书卷入库申请
 
-外部贡献者通过 GitHub 的“书卷包入库申请”Issue 表单提交书卷信息和可下载的 ZIP 地址。Issue 是审核入口，不会自动发布书卷；维护者必须完成以下检查后才将包放入 `books/` 并更新 `index.json`：
+外部贡献者通过 GitHub 的“书卷包入库申请”Issue 表单提交书卷信息，并将完整的 `.zaomeng-run.zip` 文件直接拖入 Issue 正文。Issue 是审核入口，不会自动发布书卷；若无法附加文件，可填写备用下载地址。维护者必须完成以下检查后才将包放入 `books/` 并更新 `index.json`：
 
 1. 下载的包可打开，且 ZIP 根目录存在受支持的 `package_manifest.json`。
 2. 包的 `kind`、`schema_version` 和清单信息与申请内容兼容。
