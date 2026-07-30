@@ -1,0 +1,85 @@
+name: 书卷包入库申请
+description: 提交一个待校验并发布到 Zaomeng Library 的蒸馏书卷包
+title: "[书卷入库] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请勿在 Issue 正文粘贴包内容。维护者会下载并校验你提供的包，再决定是否入库。
+
+  - type: input
+    id: title
+    attributes:
+      label: 书卷标题
+      placeholder: 例如：红楼梦
+    validations:
+      required: true
+
+  - type: input
+    id: book_id
+    attributes:
+      label: 书目 ID
+      description: 使用小写 ASCII 字母、数字和连字符；发布后不应修改。
+      placeholder: hong-lou-meng
+    validations:
+      required: true
+
+  - type: input
+    id: created_by
+    attributes:
+      label: 书卷创建者
+      description: 创建这份蒸馏书卷的账号或署名，不是小说原作者。匿名请填写“佚名”。
+      placeholder: 佚名
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 书卷版本
+      description: 使用语义化版本号。首次发布通常为 1.0.0。
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 书卷简介
+      description: 简述书卷内容，供客户端展示。
+    validations:
+      required: true
+
+  - type: textarea
+    id: release_notes
+    attributes:
+      label: 版本说明
+      description: 说明本版本的新增、修订或已知限制。
+    validations:
+      required: true
+
+  - type: input
+    id: package_url
+    attributes:
+      label: 包下载地址
+      description: 提供可由维护者下载的完整 .zaomeng-run.zip URL。链接应在审核期间保持可用。
+      placeholder: https://example.com/book.zaomeng-run.zip
+    validations:
+      required: true
+
+  - type: input
+    id: sha256
+    attributes:
+      label: SHA-256（可选）
+      description: 若已计算，请填写小写十六进制摘要；维护者会复算确认。
+      placeholder: 64 位小写十六进制字符
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我确认包可正常打开，且 ZIP 根目录包含 package_manifest.json。
+          required: true
+        - label: 我确认有权提交该书卷及其包含的内容，并理解维护者会在公开仓库中发布该包。
+          required: true

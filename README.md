@@ -51,3 +51,13 @@ zaomeng-library/
 3. 同一 `id` 的 `version` 更新意味着包内容变更。保留在仓库历史中可回溯；若要让旧版本长期可下载，应改用带版本的文件名或 GitHub Releases，避免覆盖 `books/` 下的旧文件。
 4. 入库前确认 ZIP 可以打开，且根目录存在 `package_manifest.json`。包中的 `kind` 和 `schema_version` 必须受客户端支持。
 5. 静态服务器应通过 HTTPS 提供 `GET` 和 `HEAD`，并允许跨域读取 `index.json` 和 ZIP：`Access-Control-Allow-Origin: *`。ZIP 必须保留原始字节和 `Content-Length`；支持 Range 请求可用于断点续传。
+
+## 书卷入库申请
+
+外部贡献者通过 GitHub 的“书卷包入库申请”Issue 表单提交书卷信息和可下载的 ZIP 地址。Issue 是审核入口，不会自动发布书卷；维护者必须完成以下检查后才将包放入 `books/` 并更新 `index.json`：
+
+1. 下载的包可打开，且 ZIP 根目录存在受支持的 `package_manifest.json`。
+2. 包的 `kind`、`schema_version` 和清单信息与申请内容兼容。
+3. 实际文件大小和 SHA-256 已重新计算；申请中提供的摘要仅作交叉核对。
+4. `book_id` 未被占用，或该申请是同一书卷的更高版本；创建者与版本说明已写入索引。
+5. 申请者已确认其有权公开提交该包及其中内容。
