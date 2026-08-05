@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-05T08:12:59Z",
+  "updated_at": "2026-08-05T08:24:58Z",
   "books": [
     {
       "id": "hongloumeng",
@@ -29,11 +29,11 @@
       "title": "水浒传",
       "created_by": "wkbin",
       "summary": "《水浒传》人物蒸馏包，包含林冲、武松、潘金莲、鲁智深 4 名角色、关系图谱及对话数据。",
-      "version": "1.0.0",
-      "release_notes": "首个图书馆发布版本，包含 4 名角色的蒸馏资料、关系图谱与对话数据。",
+      "version": "1.0.1",
+      "release_notes": "更新书卷内容并重新导出，包含 4 名角色的蒸馏资料、关系图谱与对话数据。",
       "download_url": "https://raw.githubusercontent.com/wkbin/zaomeng-library/main/books/shui-hu-zhuan.zaomeng-run.zip",
-      "sha256": "4e84b828f4b653afeb43cd2c80dd8b8fc0c9a251a93a7d256dbc3434794811f4",
-      "size_bytes": 6604391
+      "sha256": "d6fd3a5df8672fea5b1496b88b0d1d117dbc55cdf9824906a85c52da06449cc5",
+      "size_bytes": 5827938
     }
   ]
 }
